@@ -423,3 +423,48 @@
 
 # decode = Team(**json.loads(json_data))
 # print(decode.students)
+
+''' Використання пакету Faker (рандомні вмена, телефони, емейли ...) '''
+# from faker import Faker
+
+# fake = Faker()
+# users = []
+
+
+# def create_usere(fake, users: list, n=10):
+#     for _ in range(n):
+#         user = {}
+#         user['name'] = fake.name()
+#         user['phone_numder'] = fake.phone_number()
+#         user['email'] = fake.email()
+#         user['address'] = fake.address()
+#         user['birthday'] = fake.date()
+#         users.append(user)
+#         print(user)
+
+
+# if __name__ == '__main__':
+#     create_usere(fake, users, n=12)
+
+##### (українські дані)
+
+# from faker import Faker, Factory
+
+# fake = Factory.create('uk_UA')
+# users = []
+
+
+# def create_usere(fake, users: list, n=10):
+#     for _ in range(n):
+#         user = {}
+#         user['name'] = fake.name()
+#         user['phone_numder'] = fake.phone_number()
+#         user['email'] = fake.email()
+#         user['address'] = fake.address()
+#         user['birthday'] = fake.date()
+#         users.append(user)
+#         print(user)
+
+
+# if __name__ == '__main__':
+#     create_usere(fake, users, n=12)   
