@@ -180,36 +180,31 @@ class AddressBook(UserDict):
         with open('users_hw.json', 'w', encoding='utf-8') as file:
             json.dump(self.data.items(), file, indent = 4, ensure_ascii = False)
             print('Users were saved.')
-        
+            
 
+# book = AddressBook()
+# john_record = Record("John")
+# john_record.add_phone("1234567890")
+# john_record.add_phone("5555555555")
+# john_record.add_birthday_date("2001-11-25")
+# book.add_record(john_record)
 
-book = AddressBook()
-john_record = Record("John")
-john_record.add_phone("1234567890")
-john_record.add_phone("5555555555")
-john_record.add_birthday_date("2001-11-25")
-book.add_record(john_record)
+# a_record = Record("abc")
+# a_record.add_phone("1234567891")
+# book.add_record(a_record)
 
-a_record = Record("abc")
-a_record.add_phone("1234567891")
-book.add_record(a_record)
+# b_record = Record("bca")
+# b_record.add_phone("1134567891")
+# book.add_record(b_record)
 
-b_record = Record("bca")
-b_record.add_phone("1134567891")
-book.add_record(b_record)
+# c_record = Record("cba")
+# c_record.add_phone("1114567891")
+# book.add_record(c_record)
 
-c_record = Record("cba")
-c_record.add_phone("1114567891")
-book.add_record(c_record)
+# book.save_to_file()
 
-book.save_to_file()
+# book.load_from_file()
 
-book.load_from_file()
-
-search_results = book.search('134')
-for result in search_results:
-    print(result)
-
-
-
-        
+# search_results = book.search('134')
+# for result in search_results:
+#     print(result)

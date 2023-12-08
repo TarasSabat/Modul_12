@@ -1,0 +1,31 @@
+{
+  "John": {
+    "name": "John",
+    "phones": [
+      "1234567890",
+      "5555555555"
+    ],
+    "birthday_date": "2001-11-25"
+  },
+  "abc": {
+    "name": "abc",
+    "phones": [
+      "1234567891"
+    ],
+    "birthday_date": "None"
+  },
+  "bca": {
+    "name": "bca",
+    "phones": [
+      "1134567891"
+    ],
+    "birthday_date": "None"
+  },
+  "cba": {
+    "name": "cba",
+    "phones": [
+      "1114567891"
+    ],
+    "birthday_date": "None"
+  }
+}

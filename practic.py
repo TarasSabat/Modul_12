@@ -446,9 +446,9 @@
 # if __name__ == '__main__':
 #     create_usere(fake, users, n=12)
 
-##### (українські дані)
-
+##### (українські дані - кирилиця не спрацювала)
 # from faker import Faker, Factory
+# import json
 
 # fake = Factory.create('uk_UA')
 # users = []
@@ -463,8 +463,39 @@
 #         user['address'] = fake.address()
 #         user['birthday'] = fake.date()
 #         users.append(user)
-#         print(user)
+#     to_json(users)
+        
+# def to_json(users):
+#     with open('users.json', 'w', encoding='utf-8') as file:
+#         json.dump(users, file, indent = 4, ensure_ascii = False)
+#         print('Users were saved.')
 
 
 # if __name__ == '__main__':
-#     create_usere(fake, users, n=12)   
+#     create_usere(fake, users, n=12)  
+
+### (запис даних у таблицю)
+
+# from csv import DictWriter 
+# import json
+
+# file_json = 'users.json' 
+# file_csv = 'users.csv'
+
+# def get_users():	
+#     with open(file_json) as reader: 
+#         users = json.load(reader) 
+#         return users
+
+# def write_table():
+#     users = get_users()
+#     with open(file_csv, 'w', newline='') as file:
+#         fieldsnames = users[0].keys()
+#         writer = DictWriter(file, delimiter = ';', fieldnames=fieldsnames)
+#         writer.writeheader() 
+#         for row in users:
+#             writer.writerow(rowdict=row) 
+#             print('CSV table was created.')
+
+# if __name__ == '__main__':	
+#     write_table()
